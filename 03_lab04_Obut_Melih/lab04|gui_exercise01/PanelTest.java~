@@ -1,0 +1,25 @@
+import javax.swing.*;
+import java.awt.*;
+/**
+ *  
+ * @author Melih Obut
+ * @version 31.03.2020
+ */ 
+public class PanelTest extends JFrame
+{
+   // properties
+
+   // constructors
+   public MyFrame()
+   {
+      JButton b;
+      MyPanel  p= new MyPanel();
+
+      p.setLayout( new GridLayout(4,4) );
+
+      add( p);
+      
+      pack();
+      setVisible( true );      
+   }
+}

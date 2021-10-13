@@ -1,0 +1,30 @@
+import javax.swing.*;
+import java.awt.*;
+// import java.awt.Button;
+
+/**
+ * GUIDemo1
+ * @author melih obut
+ * @version 31/03/2020
+ */ 
+public class GUIDemo1
+{
+   public static void main( String[] args)
+   {
+
+      // constants
+
+      // variables
+      JFrame  f;
+      JButton b;
+
+      // program code
+      System.out.println( "Start...");
+
+      f = new MyFrame();
+
+
+      System.out.println( "End.");
+   }
+
+}

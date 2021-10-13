@@ -1,0 +1,15 @@
+import javax.swing.*;
+/**
+ * Main class to display game
+ * 
+ * @author Muhammed Maruf Satir
+ * @date 2.11.2019 
+ */
+public class Launcher {
+ public static void main(String[] args)
+ {
+  JFrame frame = new PotLuckDisplay();
+  frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+  frame.setVisible(true);
+ }
+}

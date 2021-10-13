@@ -1,0 +1,11 @@
+import java.awt.*;
+/**
+ * Drawable interface with draw method
+ * 
+ * @author Melih Obut
+ * @date 07.04.2020
+ */
+public interface Drawable {
+   void draw(Graphics g);
+   
+}

@@ -1,0 +1,18 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.mycompany.shapes;
+
+
+/**
+ * Interface that setting locations and getting locations
+ * @author melihobut
+ * @date 10.03.2020
+ */
+public interface Locatable {
+ public int getX();
+ public int getY();
+ public void setLocation(int x, int y);
+}

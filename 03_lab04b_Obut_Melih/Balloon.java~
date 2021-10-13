@@ -1,0 +1,54 @@
+
+package com.mycompany.shapes;
+
+import java.awt.*;
+import javax.swing.*;
+import java.util.*;
+
+
+/**
+ * Balloon class draw and grow the balloons 
+ * 
+ * @author melihobut
+ * @date 07.04.2020
+ */
+public class Balloon extends Circle implements Drawable {
+  static final int DEFAULT_SIZE = 25;
+  static final int MAX_SIZE = 100;
+ 
+  //constructor
+  public Balloon(int x, int y) {
+    super(DEFAULT_SIZE);
+    setLocation(x, y);
+
+  }
+   /* draw() 
+    * @param Graphics g
+    * @return drawint the ballons
+    */
+  public void draw(Graphics g) {
+    int radius = getRadius();
+    g.drawOval(getX() - radius, getY() - radius, radius * 2, radius * 2);
+
+
+  }
+    /* grow() make bigger the ballons if pass 25 burst
+    * @return 0 
+    */
+  public boolean grow() {
+    setRadius(getRadius() + 1);
+    if (getRadius() > MAX_SIZE)
+      burst(); 
+    return (getRadius() != 0);
+  }
+  
+    /* burst() make 0 the radius and disappear the ballon
+    * @return 
+    */
+  public void burst() {
+    setRadius(0);
+    setSelected(true);
+  }
+
+
+}
