@@ -1,0 +1,9 @@
+import java.util.ArrayList;
+import cs1.SimpleURLReader;
+/**
+ * Program that return a non-html version of the text.
+ * 
+ * @author melihobut
+ * @date 29.02.2020
+ */
+public class merkezBankası extends MySimpleURLReader {

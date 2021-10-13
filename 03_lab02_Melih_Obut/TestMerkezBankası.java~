@@ -1,0 +1,16 @@
+import cs1.SimpleURLReader;
+/**
+ * Test program of HTLMFilteredReader
+ * @author melihobut
+ * @date 29.02.2020
+ */
+public class TestMerkezBankası {
+   
+   public static void main(String[] args) {
+      
+      merkezBankası html = new merkezBankası("https://www.tcmb.gov.tr");
+      
+      System.out.println(html.getPageContents());
+      System.out.println(html.getUnfilteredPageContents());
+   }
+}
