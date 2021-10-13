@@ -1,0 +1,33 @@
+/*
+ * Class that returns numbers which are strictly increasing 
+ * 
+ * @date 25.04.2020
+ * @author melihobut
+ */
+public class enumerator 
+{ 
+   public static void main(String args[])
+   { 
+      enumerator obj = new enumerator(); 
+      int n = 2; 
+      obj.findStrictlyIncreasingNum(0, " ", n); 
+   }  
+
+   public void findStrictlyIncreasingNum(int start, String out, int n) 
+   { 
+      if (n == 0) 
+      { 
+         System.out.print(out + " "); 
+      } 
+      
+      // start from (prev digit + 1) till 9 
+      for (int i = start; i <= 9; i++) 
+      { 
+         // append current digit to number 
+         String str = out + Integer.toString(i); 
+         
+         // recurse for next digit 
+         findStrictlyIncreasingNum(i + 1, str, n - 1); 
+      } 
+   } 
+} 

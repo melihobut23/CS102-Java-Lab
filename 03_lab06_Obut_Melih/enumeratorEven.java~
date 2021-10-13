@@ -1,0 +1,61 @@
+/*
+ * Class that returns numbers which are strictly increasing and even
+ * 
+ * @date 25.04.2020
+ * @author melihobut
+ */
+public class enumeratorEven 
+{ 
+   public static void main(String args[])
+   { 
+      int digits = 2;
+      int starting_num = 1;
+      int ending_num = 1;
+      
+      for (int i = 0; i < digits - 1; i++){
+         
+         starting_num *= 10;
+      }
+      
+      ending_num = (starting_num * 10) - 1;
+      even_number(starting_num, ending_num, digits);
+      
+   }  
+   
+   public static void even_number(int num, int ending_number , int digit) 
+   { 
+      if (num >= ending_number){
+         return; //to stop
+      }
+      
+      if ((num % 2) == 0) {
+         
+         int n = num;
+         int cur_digit = -1;
+         int prev_digit = -1;
+         
+         do {
+            
+            if ((cur_digit == -1) && (prev_digit == -1)) {
+               
+               prev_digit = n % 10;q
+               n = n / 10;
+               cur_digit = n % 10;
+               n = n / 10;  
+            } else {
+               prev_digit = cur_digit;
+               cur_digit = n % 10;
+               n = n / 10;
+               
+            }
+            
+         } while (n == num);
+
+         if ( (n % 2) == 0 && (prev_digit > cur_digit)){
+            
+            System.out.print( " "+ num);
+         }
+      } 
+      even_number(num + 1, ending_number, digit); 
+   } 
+}

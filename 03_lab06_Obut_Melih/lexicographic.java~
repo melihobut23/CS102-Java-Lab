@@ -1,0 +1,39 @@
+import java.util.*;
+
+public class lexicographic {
+   /*
+    * Class that returns lexicographicly ordered list
+    * 
+    * @date 25.04.2020
+    * @author melihobut
+    */
+   public static ArrayList<String>alist=new ArrayList<String>();
+   
+   public static void main(String[] args) {
+      
+      alist.add("melih");
+      alist.add("cs");
+      alist.add("lab");
+      boolean list= order(0,1);
+      System.out.println(list);  
+   }
+   
+   public static boolean order(int i, int j) {
+      int one=i;
+      int two=j;
+      int compare = alist.get(i).compareTo(alist.get(j));  
+      
+      if (compare < 0) {  
+         one++;
+         two++;
+         
+         if(two<alist.size()){ 
+            order(one,two); 
+         }
+         return true;
+      }
+      else {
+         return false;
+      }
+   }
+}
