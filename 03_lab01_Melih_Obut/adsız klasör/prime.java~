@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+
+public class prime
+{
+   public static void main( String[] args)
+   {
+      Scanner scan = new Scanner( System.in);
+      
+      // constants
+      final int FIRST_PRIME = 2;
+      
+      // variables
+      IntBag primeBag;
+      int divisible;
+      
+      // program code
+      primeBag = new IntBag();
+      primeBag.add(FIRST_PRIME);
+      
+      for (int candidate = 3; primeBag.size() < 100; candidate++)
+      {
+         divisible = 0;
+         for (int i = 0; i < primeBag.size() && divisible == 0; i++)
+         {
+            if (candidate % primeBag.get(i) == 0)
+            {
+               divisible++;
+            }
+         }
+         if (divisible == 0)
+         {
+            primeBag.add(candidate);
+         }
+      }
+      System.out.println( "The first 100 Prime Numbers are: ");
+      System.out.println( primeBag.toString());
+   }
+}
